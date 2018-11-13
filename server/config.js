@@ -8,6 +8,6 @@ export const db = {
 export const dbName = {
     database:'fengyuan_blog'
 }
-export const base_API = 'api/'
+export const base_API = '/api'
 
 export const secret = 'fengyuan_blog'

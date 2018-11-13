@@ -10,18 +10,19 @@ const sqlContent = fs.readFileSync(path.resolve(__dirname,'..','./sql/fengyuan_d
 const init = mysql.createConnection(db)
 init.connect()
 let pool = null;
+//判断如果数据库存在了，则不需要执行下面的代码
 init.query('CREATE DATABASE fengyuan_blog',err=>{
     Object.assign(db,dbName)//合并成db一个对象
     //第二次连接数据库，这时候，数据库fengyuan_blog已经创建成功了，这时候，直接连接fengyuan_blog数据库
     //然后执行sql文件夹下的fengyuan_blog
     pool = mysql.createPool(db)
     if(err){
-        console.log(err)
         console.log('fengyuan_blog database created already')
     }else{
-        console.log('create fengyuan_blog Database')
         query(sqlContent).then(res=>{
             console.log('import sql is success')
+        }).catch(err=>{
+            console.log(err)
         })
     }
 })
