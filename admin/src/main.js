@@ -19,6 +19,10 @@ Vue.use(VeeValidate)
 import Notifications from 'vue-notification'
 Vue.use(Notifications)
 
+//加入我们的权限判断
+import '@/permission'
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

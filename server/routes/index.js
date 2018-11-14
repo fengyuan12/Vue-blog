@@ -12,6 +12,6 @@ router.get('/',async ctx=>{
 router.prefix(`${base_API}`)
 
 //登录
-router.post('/login',UserController.login());
+router.post('/login',UserController.login);
 
 export default router
