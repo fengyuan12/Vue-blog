@@ -1,6 +1,7 @@
 import axios from 'axios'
 import store from '@/store'
 import { getToken,removeToken } from '@/utils/auth'
+import Vue from 'vue'
 
 // 创建axios实例
 const service = axios.create({
