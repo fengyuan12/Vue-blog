@@ -1,8 +1,9 @@
 <template>
     <div class="login-container">
+      <h1>fengyuan's blog</h1>
       <header class="login-head">
         <span>風缘的博客</span>
-        <img class="logo" src="../assets/image/logo.png" alt="">
+        <img class="logo" src="../assets/image/lg.jpg" alt="">
       </header>
       <section class="form">
         <span class="slogan">
@@ -20,6 +21,7 @@
 </template>
 
 <script>
+  import '../canvas.js'
   //设置验证的提示消息
   import { Validator } from 'vee-validate'
   //引入设置cookie的方法
@@ -95,6 +97,11 @@
 <style type="text/scss" lang="scss" scoped>
   /*记得引入全局变量的文件*/
   @import "../assets/style/variable";
+  h1{
+    position: absolute;
+    left: 6%;
+    top: 5%;
+  }
   .login-container {
     height: 100%;
     @include flex($flow: column wrap);

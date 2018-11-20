@@ -11,7 +11,7 @@
       </section>
       <a class="log-out" @click="logout">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-tuichu"></use>
+          <use xlink:href="#icon-guanji"></use>
         </svg>
         <span>&nbsp;登出</span>
       </a>

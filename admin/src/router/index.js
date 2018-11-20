@@ -7,6 +7,8 @@ import Login from '@/components/Login'
 //引入主页面组件
 import List from '@/components/List'
 
+import Tag from '@/components/Tag'
+
 export default new Router({
   routes: [
     {
@@ -19,8 +21,11 @@ export default new Router({
     },
     {
       path:'/list',
-      component:List,
-
+      component:List
+    },
+    {
+      path:'/tag',
+      component:Tag
     },
     {path:'*',redirect:'/login'}
   ]

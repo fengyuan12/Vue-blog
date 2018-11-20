@@ -26,5 +26,11 @@ router.get('/articles',checkToken,ArticleController.getArticles)
 router.post('/articles/add',checkToken,ArticleController.addArticle)
 //查询一下最新发布的那篇文章的详细信息
 router.get('/articles/:id',checkToken,ArticleController.getOneArticle)
+//更新一篇新的文章
+router.post('/articles/update/:id',checkToken,ArticleController.updateArticle)
+//删除一篇文章
+router.delete('/articles/:id',checkToken,ArticleController.deleteArticle)
+//发布文章
+router.put('/articles/publish/:id',checkToken,ArticleController.publishArticle)
 
 export default router
